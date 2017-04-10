@@ -29,7 +29,8 @@ H5P.MarkTheWords = (function ($, Question, Word, KeyboardNav, XapiGenerator) {
       textField: "This is a *nice*, *flexible* content type.",
       behaviour: {
         enableRetry: true,
-        enableSolutionsButton: true
+        enableSolutionsButton: true,
+        applyPenalties: true
       },
       checkAnswerButton: "Check",
       tryAgainButton: "Retry",
@@ -320,6 +321,10 @@ H5P.MarkTheWords = (function ($, Question, Word, KeyboardNav, XapiGenerator) {
       .replace(/@correct/g, answers.correct.toString())
       .replace(/@wrong/g, answers.wrong.toString())
       .replace(/@missed/g, answers.missed.toString());
+
+    if(!this.params.behaviour.applyPenalties) {
+      score = answers.correct;
+    }
 
     this.setFeedback(scoreText, score, this.answers);
 

@@ -37,6 +37,10 @@
         },
         {
           "label": "\"Lösung zeigen\" ermöglichen"
+        },
+        {
+          "label": "Strafpunkte vergeben",
+          "description": "Zieht für jede falsche Antwort einen Punkt ab."
         }
       ]
     },
