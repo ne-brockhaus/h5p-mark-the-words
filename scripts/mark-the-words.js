@@ -30,7 +30,7 @@ H5P.MarkTheWords = (function ($, Question, Word, KeyboardNav, XapiGenerator) {
       behaviour: {
         enableRetry: true,
         enableSolutionsButton: true,
-        applyPenalties: true
+        applyPenalties: false
       },
       checkAnswerButton: "Check",
       tryAgainButton: "Retry",
